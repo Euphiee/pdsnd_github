@@ -175,6 +175,7 @@ def user_stats(df):
 
 
     # Display earliest, most recent, and most common year of birth
+    # there is no birth year data in washington, show no data
     print('\nDisplay earliest, most recent, and most common year of birth\n')
     try:
         earliest = int(df['Birth Year'].min())
