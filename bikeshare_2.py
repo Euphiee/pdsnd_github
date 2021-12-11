@@ -164,6 +164,7 @@ def user_stats(df):
     print(user_types)
 
     # Display counts of gender
+    # there is no gender data in washington, show no data
     print('\nDisplay counts of gender\n')
     try:
         gender = df['Gender'].value_counts()
@@ -174,6 +175,7 @@ def user_stats(df):
 
 
     # Display earliest, most recent, and most common year of birth
+    # there is no birth year data in washington, show no data
     print('\nDisplay earliest, most recent, and most common year of birth\n')
     try:
         earliest = int(df['Birth Year'].min())
@@ -193,8 +195,8 @@ def raw_data(df):
     """Displays individual raw data."""
     while True:
             try:
-                raw = input('\nWould you to view indeividual raw data? Enter yes or no.\n').lower()
-                if raw in ['yes', 'no']:
+                show = input('\nWould you to view indeividual raw data? Enter yes or no.\n').lower()
+                if show in ['yes', 'no']:
                     break
                 else:
                     print('Please enter a valid input.')
@@ -202,13 +204,13 @@ def raw_data(df):
                 continue
         
     lines_start = 0       
-    while raw == 'yes':
+    while show == 'yes':
         print(df.iloc[lines_start])
         lines_start += 1
         while True:
             try:
-                raw = input('\nWould you to view indeividual raw data? Enter yes or no.\n').lower()
-                if raw in ['yes', 'no']:
+                show = input('\nWould you to view indeividual raw data? Enter yes or no.\n').lower()
+                if show in ['yes', 'no']:
                     break
                 else:
                     print('Please enter a valid input.')
