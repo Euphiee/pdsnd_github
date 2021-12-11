@@ -164,6 +164,7 @@ def user_stats(df):
     print(user_types)
 
     # Display counts of gender
+    # there is no gender data in washington, show no data
     print('\nDisplay counts of gender\n')
     try:
         gender = df['Gender'].value_counts()
