@@ -17,3 +17,5 @@ It's important to give proper credit. Add links to any repo that inspired you or
 
 ### Bikeshare Project
 In this project, I used Python to explore data related to bike share systems in Chicago, New York City, and Washington.
+
+Packages used in this project are pandas, numpy, and time.
