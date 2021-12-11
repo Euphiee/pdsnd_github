@@ -193,8 +193,8 @@ def raw_data(df):
     """Displays individual raw data."""
     while True:
             try:
-                raw = input('\nWould you to view indeividual raw data? Enter yes or no.\n').lower()
-                if raw in ['yes', 'no']:
+                show = input('\nWould you to view indeividual raw data? Enter yes or no.\n').lower()
+                if show in ['yes', 'no']:
                     break
                 else:
                     print('Please enter a valid input.')
@@ -202,13 +202,13 @@ def raw_data(df):
                 continue
         
     lines_start = 0       
-    while raw == 'yes':
+    while show == 'yes':
         print(df.iloc[lines_start])
         lines_start += 1
         while True:
             try:
-                raw = input('\nWould you to view indeividual raw data? Enter yes or no.\n').lower()
-                if raw in ['yes', 'no']:
+                show = input('\nWould you to view indeividual raw data? Enter yes or no.\n').lower()
+                if show in ['yes', 'no']:
                     break
                 else:
                     print('Please enter a valid input.')
